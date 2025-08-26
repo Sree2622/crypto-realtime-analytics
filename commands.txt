@@ -1,0 +1,16 @@
+sudo docker compose down --remove-orphans
+sudo docker ps -a   # check if anything leftover
+sudo docker rm -f $(sudo docker ps -aq)   # force remove everything
+sudo docker compose up -d
+
+
+
+
+
+sudo docker run --rm -it  alpine sh
+sudo docker run --rm -it --network real_time_pipeline_default alpine sh
+sudo docker inspect kafka | grep NetworkMode
+sudo docker network list
+sudo docker inspect kafka | grep IPAddress
+sudo docker ps
+ nc -vz kafka 9092

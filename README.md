@@ -1,31 +1,43 @@
-Real-Time Cryptocurrency Analytics Platform
+# Real-Time Cryptocurrency Analytics Platform
 
-A full-stack real-time data pipeline that ingests live cryptocurrency prices, processes them with Spark Streaming, stores results in MongoDB, and visualizes trends on a React dashboard.
+A full-stack real-time data pipeline for live cryptocurrency analytics.  
+Ingests live crypto prices, processes them with Spark, stores results in MongoDB, and visualizes on a React dashboard.
 
-Features
+---
 
-Live data ingestion from CoinGecko API
+## Features
+- Live data ingestion from CoinGecko API  
+- Real-time streaming with Kafka + Spark Structured Streaming  
+- Aggregated crypto price storage in MongoDB  
+- REST API built with Flask  
+- Interactive React dashboard with live BTC & ETH charts  
+- Containerized with Docker Compose  
 
-Real-time streaming using Apache Kafka + Spark Structured Streaming.
+---
 
-Aggregated crypto price storage in MongoDB.
+## Tech Stack
+- Backend: Kafka, Spark, Flask, MongoDB  
+- Frontend: React (Vite)  
+- Containerization: Docker & Docker Compose  
+- Data Source: CoinGecko API  
 
-REST API built with Flask to serve aggregated data.
+---
 
-Interactive React dashboard with live charts (Bitcoin & Ethereum).
+## Getting Started
 
-Fully containerized with Docker Compose.
+### 1. Clone the repo
+```bash
+git clone https://github.com/yourusername/crypto-realtime-analytics.git
+cd crypto-realtime-analytics
+```
 
+### 2. Start backend services
+```bash
+sudo docker compose up --build -d
+```
 
-
-Getting Started
-1 Clone the repo
-
-2 Start backend services (Kafka, Spark, Flask API, MongoDB, Producer)
-    sudo docker compose up --build -d
-
-3 Start the frontend dashboard
-    cd frontend
-    npm install
-    npm start
+### 3. Start the frontend dashboard
+```bash
+sudo docker compose up --build -d
+```
 
